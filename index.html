@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Personal Goals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-cover">
+            <div class="site-identity">
+                <p class="site-name">Matur Innocent J</p>
+            </div>
+            <nav class="nav-bar">
+                <ul class="nav-link">
+                    <li><a class="nlink" data-testid="hngLink" href="http://hng.tech/learn">HNG Learn</a></li>
+                    <li><a class="nlink" data-testid="scrapeanywebLink" href="http://scrapeanyweb.site/">Scrape Any Web</a></li>
+                    <li><a class="nlink" data-testid="keywordLink" href="http://keyword.dog/">Keyword Dog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="site-body">
+        <article class="welcome-section">
+            <h1 class="landing-heading">TWO YEARS GOAL IN TECHNOLOGY</h1>
+            <p class="landing-text">See through my Goals in the Next Two Years</p>
+            <a href="#goals-section" class="landing-button">View Goals</a>
+        </article>
+    </section>
+    <section id="goals-section" class="goals-section">
+        <h2 class="goal-heading">MY TECH GOALS</h2>
+        <div class="goals-cover">
+
+            <div class="goal-card">
+                <p class="card-title">Skills</p>
+                <ul>
+                    <li>Proficiency in a Framework (ReactJS & React Native)</li>
+                    <li>Familiarity with Emerging Technologies</li>
+                    <li>Mastering a New Framework</li>
+                </ul>
+            </div>
+            <div class="goal-card">
+                <p class="card-title">Projects</p>
+                <ul>
+                    <li>Completing 5+ personal projects (e.g, websites & web apps)</li>
+                    <li>Contributing to open-source projects</li>
+                    <li>Launching successful client(s) project
+                    </li>
+                </ul>
+            </div>
+            <div class="goal-card">
+                <p class="card-title">Career</p>
+                <ul>
+                    <li>Promotion to a senior developer role</li>
+                    <li>Leading a team or mentoring junior developers
+                    </li>
+                    <li>Starting a Tech Business/Company business
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="goals-cover">
+            <div class="goal-card">
+                <p class="card-title">Education</p>
+                <ul>
+                    <li>Completing PostGraduate Studies</li>
+                    <li>Attending industry conferences or meetups
+                    </li>
+                    <li>Completing online courses or certifications</li>
+                </ul>
+            </div>
+            <div class="goal-card">
+                <p class="card-title">Networking</p>
+                <ul>
+                    <li>Building a professional network on LinkedIn
+                    </li>
+                    <li>Connecting with industry leaders or peers
+                    </li>
+                    <li>Participating in online communities</li>
+                </ul>
+            </div>
+            <div class="goal-card">
+                <p class="card-title">Achievements</p>
+                <ul>
+                    <li>Winning a coding competition or hackathon</li>
+                    <li>Receiving recognition or awards for work</li>
+                    <li>Being featured in industry publications or podcasts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="info">
+        <section class="timeSection">
+            <h2>Current Time</h2>
+            <p data-testid="currentTimeUTC"></p>
+            <p data-testid="currentDay"></p>
+        </section>
+        <section class="slackSection">
+            <h2>Slack Information</h2>
+            <p data-testid="slackDisplayName">Censono</p>
+            <p data-testid="slackEmail">maturinnocent@gmail.com</p>
+            <img data-testid="slackProfilePicture" src="Passport.jpg" alt="Slack Profile Picture">
+        </section>
+    </div>
+    <script> 
+        const currentTimeUTC = document.querySelector('[data-testid="currentTimeUTC"]');
+        const currentDay = document.querySelector('[data-testid="currentDay"]');
+
+        setInterval(() => {
+            const now = new Date();
+            const utcTime = now.toUTCString();
+            const day = now.toLocaleString('en-US', { weekday: 'long' });
+            currentTimeUTC.textContent = utcTime;
+            currentDay.textContent = day;
+        }, 1000);
+    </script>
+</body>
+</html>
